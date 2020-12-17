@@ -1,0 +1,262 @@
+/*reset da pagina*/
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+/****/
+
+/*div gerais*/
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.limpa{
+	clear: both;
+}
+
+/****/
+
+header{
+	background-color: rgb(180,180,180);
+	padding:10px 2% 30px 2%;
+	/*espaçamento interno de 10px cima e 30px baixo 2% esquerda e 2% direita*/
+}
+
+.logo-1{
+	float: left;/*fluatuamos para esquerda*/
+	width: 140px;/*tamanho da largura da imagem*/
+	height: 60px;/*tamanho da altura da imagem*/
+	background-image:url(../imagem/logo1.png);/*importamos imagem*/
+	background-size: 100% auto;/*100% largura e automatico altura*/
+	background-repeat: no-repeat;/*não repetir a imagem*/
+	background-position: center;/*posição da imagem no centro*/
+	/*background-color: purple;*/
+}
+
+.logo-2{
+	float: right;
+	width: 140px;
+	height: 60px;
+	background-image:url(../imagem/logo2.png);
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*background-color: green;*/
+}
+.seta{
+	width:100px;
+	height: 80px;
+	position:relative;
+	top:-95px;
+	left:25px;
+	display: inline-block;
+	text-align: center;
+	background-image: url(../imagem/arrow.png);
+	background-repeat: no-repeat;
+}
+
+
+.bg{
+	position:relative;
+	height:560px;
+	background-position: center;
+	background-size: cover;/*para deixa imagem responsiva*/
+	background-image: url(../imagem/land.jpg);
+}
+
+.formulario{
+
+	position:absolute;
+	right: 30px;
+	top: -2.5%;
+	z-index: 2;
+	width: 400px;
+	height: 105%;
+	background-color: white;
+	box-shadow: 1px 1px 2px 1px rgb(180,180,180);
+	/*fizemos uma sobreamento*/
+}
+.formulario h2{
+	font-weight: normal;/*tiramos o negrito do h2*/
+	background-color: rgba(210,210,210);
+	padding: 25px;/*espaçamento interno no titulo de 25px*/
+	color:black;/*a cor da letra h2*/
+	font-size: 18px;/*tamanho da fonte*/
+}
+.formulario form{
+	margin-top:20px;
+	padding: 15px;
+}
+.formulario form input[type=text]{
+	width: 100%;
+	border:1px solid #ccc;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+/*para mexe dentro do input dando 10px espamento interno no lado esquerdo 
+do placeholder*/
+}
+.form-wrape:not(:first-child){
+	margin-top:40px; 
+}
+
+.form-wrape:last-child{
+	margin-top: 20px;
+}
+
+.formulario form p{
+	color:#525252;
+	font-size: 14px;
+}
+
+
+
+/*configuração do botão de enviar*/
+
+
+.formulario form input[type=submit]{
+	background-color: #033C50;
+	text-transform: uppercase;/*transforma letra em maiuscula*/
+	color:white;
+	font-size: 25px;
+	height: 50px;
+	width:100%;
+	cursor: pointer;
+	border:0;
+}
+
+/*configuração sessao 1*/
+
+section.cover-form{
+	width: 100%;/*section 100% de largura responsividade*/
+
+}
+section.chamada{
+	z-index: 1;
+	text-align: center;/*texto alinamento centro*/
+	position: relative; /*display inline-block*/
+	width: 100%;
+}
+
+section.chamada div.container{
+	background-color: gray;
+	padding:70px 0 50px 0;
+	
+}
+
+section.chamada h2{
+	width: 98%;
+	max-width: 700px;/*largura de 700px*/
+	display: inline-block;
+	font-size: 22px;
+	color:black;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.chamada p{
+	width: 98%;
+	max-width: 700px;
+	display: inline-block;
+	color: white;
+	margin-top:10px;
+	font-size: 18px;
+	font-weight: normal;
+
+}
+
+/*display flex mosaico*/
+.flex-moisaco{
+	display: flex;
+}
+
+.item-1-mosaico{
+	background-position: center;
+	background-size: cover;
+	width: 60%;
+}
+
+.item-2-mosaico{
+	width: 40%;
+	padding: 90px 40px;
+	background-color: lightgray;
+}
+
+.item-2-mosaico p{
+	color:blue;
+}
+
+footer{
+	text-align: center;
+	padding:20px 0;
+	background-color: darkgray;
+}
+
+footer p{
+	margin-top: 8px;
+}
+
+footer img{
+	width: 150px;
+	height: 50px;
+	background-size: 100% 100%; 
+}
+
+
+
+@media screen and (max-width: 960px){
+	.bg{
+		height: auto;
+		padding: 40px 0;
+		text-align: center;
+	}
+	.formulario{
+		height: auto;
+		max-width: 400px;
+		width: 96%;
+		position: static;
+		display: inline-block;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+
+	.flex-moisaco{
+		display: block;
+	}
+
+	.item-1-mosaico{
+		padding-top:80%;
+		width: 100%;
+	}
+
+	.item-2-mosaico{
+		text-align: justify;
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width:510px ){
+	header{
+		text-align: center;/*colocamos no */
+	}
+	.logo-1,.logo-2{
+		margin-top: 10px;
+		float: none;
+		display: inline-block;
+		/*desabilitamos o float para colocamos o display:inline-block para logo
+		virá display inline-block*/
+	}
+	
+}
